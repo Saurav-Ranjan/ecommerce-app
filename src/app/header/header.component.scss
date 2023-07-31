@@ -5,39 +5,45 @@
 
 
 .search-bar {
-    position: relative;
-    width: 300px;
-  }
+  position: relative;
+  width: 280px;
+}
 
-  .search-bar input[type="search"] {
-    padding-right: 32px; /* Leave space for the search icon */
-  }
+.search-bar input[type="search"] {
+  padding-right: 32px;
+  /* Leave space for the search icon */
+}
 
-  .search-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none; /* Ensure the icon does not interfere with input focus */
-  }
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  /* Ensure the icon does not interfere with input focus */
+}
 
-  .btn-custom-width {
-    width: 100px; /* Adjust the width as per your requirement */
-  }
-  
-  .custom-width{
-    margin-right: 20px
-  }
+.btn-custom-width {
+  width: 120px;
+  /* Adjust the width as per your requirement */
+}
 
-  .text-bold{
-    font-weight: bold;
-  }
+.custom-width {
+  margin-right: 20px
+}
 
-  /* Custom sticky header style */
-  .sticky-top {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
+.text-bold {
+  font-weight: bold;
+}
 
-  
+/* Custom sticky header style */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.banner-img {
+  height: 300px;
+  width: 700px;
+}
