@@ -5,17 +5,22 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {ModulesModule} from '../app/modules/modules.module';
-
+import { UserLoginComponent } from './Admin/user-login/user-login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ModulesModule
+    ModulesModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

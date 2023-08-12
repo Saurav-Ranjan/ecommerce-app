@@ -3,15 +3,17 @@
   <div class="container">
 
     <!-- Logo -->
-    <a class="navbar-brand " href="#">
+    <a class="navbar-brand ms-2 " [routerLink]="['/home']">
       <img src="assets/images/angular.png" alt="Logo" width="60" height="60">
     </a>
 
     <!-- Search bar with search icon -->
-    <div class="search-bar ms-2 custom-width">
+    <div class="search-bar  custom-width">
       <input class="form-control" type="search" placeholder="Search" aria-label="Search">
       <i class="fas fa-search search-icon"></i>
     </div>
+  
+
 
     <!-- Toggler for mobile menu -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -23,11 +25,11 @@
     <div class="collapse navbar-collapse" id="navbarNav">
 
       <ul class="navbar-nav mb-2 mb-lg-0 custom-width">
+        <!-- <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link text-bold text-white " [routerLink]="['/home']">Home</a>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link text-bold text-white custom-width" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-bold text-white custom-width" href="#">About Us</a>
+          <a class="nav-link text-bold text-white custom-width" href="#">Become a Seller</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-bold text-white custom-width" href="#">Contact Us</a>
@@ -35,18 +37,20 @@
       </ul>
 
       <!-- Login Button -->
-      <a href="#" class="btn btn-light text-bold btn-custom-width custom-width  ms-2 ">
-        <i class="fas fa-user  text-bold"></i>   Login
-      </a>
+      <button (click)="navigateToAdmin()" class="btn btn-light text-bold btn-custom-width custom-width  ">
+        <i class="fas fa-user Login text-bold"></i> Login
+      </button>
 
+    
+      
       <!-- Wishlist Icon -->
       <button class="btn btn-primary">
-        <i class="fas fa-heart add-to-cart-icon text-bold"></i> Wishlist
+        <i class="fas fa-heart Wishlist text-bold"></i> Wishlist
       </button>
 
 
       <!-- Add to Cart Icon -->
-      <button class="btn btn-primary">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
         <i class="fas fa-shopping-cart add-to-cart-icon text-bold"></i> Add to Cart
       </button>
 
@@ -56,8 +60,79 @@
 </header>
 
 
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f5f5f5;">
+  <!-- Container wrapper -->
+  <div class="container justify-content-center justify-content-md-between">
+    <!-- Toggle button -->
+    <button
+            class="navbar-toggler border text-dark py-2"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarLeftAlignExample"
+            aria-controls="navbarLeftAlignExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+      <i class="fas fa-bars"></i>
+    </button>
+<div class="collapse navbar-collapse justify-content-center " id="navbarLeftAlignExample">
+  <!-- Left links -->
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+    <!-- <li class="media">
+      <img src="path/to/your/photo.jpg" class="mr-3" alt="Photo" style="width: 50px; height: 50px;">
+      <div class="media-body">
+          <p class="mt-0">Your text goes here.</p>
+      </div>
+  </li> -->
+    <!-- Navbar dropdown -->
+    <li class="nav-item dropdown mx-4">
+      <a class="nav-link dropdown-toggle text-bold text-dark mb-0 " href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+        Category
+      </a>
+      <!-- Dropdown menu -->
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        
+        <li>
+          <a class="dropdown-item" href="#">Action</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Another action</a>
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item mx-2">
+      <a class="nav-link text-bold text-dark" [routerLink]="['/product-list']">Products</a>
+    </li>
+    <li class="nav-item mx-2">
+      <a class="nav-link text-bold text-dark" href="#">Hot offers</a>
+    </li>
+    <li class="nav-item mx-2">
+      <a class="nav-link text-bold text-dark" href="#">Gift boxes</a>
+    </li>
+    <li class="nav-item mx-2">
+      <a class="nav-link text-bold text-dark" href="#">Projects</a>
+    </li>
+    <li class="nav-item mx-2">
+      <a class="nav-link text-bold text-dark" href="#">Menu item</a>
+    </li>
+    <li class="nav-item mx-2">
+      <a class="nav-link text-bold text-dark" href="#">Menu name</a>
+    </li>
+   
+  </ul>
+  <!-- Left links -->
+</div>
+</div>
+</nav>
+
+
 <!-- Jumbotron -->
-<div class="bg-primary text-white py-4">
+<div class="bg-primary text-white py-4" *ngIf="!hideDiv">
   <div class="container">
     <div class="row">
       <div class="col">
@@ -85,5 +160,5 @@
 
   </div>
 
-</div>
+</div> 
 <!-- Jumbotron -->
