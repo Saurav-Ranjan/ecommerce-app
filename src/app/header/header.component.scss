@@ -43,7 +43,28 @@
   z-index: 999;
 }
 
-.banner-img {
+//Responsive
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .banner-img {
+    height: 300px;
+    width: 460px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+    /* For Tabs: */
+    .banner-img {
+      height: 300px;
+      width: 510px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+   /* For Laptop: */
+   .banner-img {
   height: 300px;
   width: 700px;
+}
 }
