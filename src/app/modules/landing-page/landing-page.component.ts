@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -9,7 +10,10 @@ import { ProductService } from 'src/app/services/product.service';
 export class LandingPageComponent implements OnInit {
   ProductArr: any = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private router: Router,
+    ) {}
 
   ngOnInit(){
   this.getAllProducts();
@@ -30,4 +34,9 @@ export class LandingPageComponent implements OnInit {
       console.error('Error loading products:', error);
     }
   }
+
+  goToProductDetails(productId: string) {
+    this.router.navigate(['/product-details', productId]);
+  }
+
 }

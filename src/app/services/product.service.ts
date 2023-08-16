@@ -18,6 +18,7 @@ export class ProductService {
 
   // Get a single product by ID
   getProductById(productId: string): Observable<any> {
+    console.log("productId",productId);
     return this.http.get(`${this.baseUrl}/${productId}`);
   }
 
@@ -29,7 +30,7 @@ export class ProductService {
 
 
   // Update a product
-  updateProduct(productId: string, product: any): Observable<any> {
+  updateProduct(productId: any, product: any): Observable<any> {
     return this.http.put(`${this.baseUrl}/${productId}`, product);
   }
 
