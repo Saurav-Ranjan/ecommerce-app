@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class LandingPageComponent implements OnInit {
   ProductArr: any= [];
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(private productService: ProductService, private router: Router , private CartService:CartService) {}
 
   ngOnInit(){
   this.getAllProducts();
@@ -40,6 +41,11 @@ getAllProducts(){
 
   goToProductDetails(productId: string) {
     this.router.navigate(['/product-details', productId]);
+  }
+
+  addToCart(product: any) {
+    this.CartService.addToCart(product);
+    this.router.navigate(['/cart']);
   }
 
 }
