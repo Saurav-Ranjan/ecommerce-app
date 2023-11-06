@@ -12,7 +12,7 @@ export class ProductService {
     {
       productId: '1',
       productName: 'Product 1',
-      productImage1: 'image1.jpg',
+      productImage1: 'assets/images/apple-iphone-14-pro-max-1.jpg',
       productImage2: 'image2.jpg',
       productDesc: 'Description of Product 1',
       productPrice: 119.99
@@ -20,7 +20,7 @@ export class ProductService {
     {
       productId: '2',
       productName: 'Product 2',
-      productImage1: 'image3.jpg',
+      productImage1: 'assets/images/image2.png',
       productImage2: 'image4.jpg',
       productDesc: 'Description of Product 2',
       productPrice: 129.99
@@ -28,7 +28,7 @@ export class ProductService {
     {
       productId: '3',
       productName: 'Product 3',
-      productImage1: 'image5.jpg',
+      productImage1: 'assets/images/image3.png',
       productImage2: 'image6.jpg',
       productDesc: 'Description of Product 3',
       productPrice: 139.99
@@ -36,7 +36,7 @@ export class ProductService {
     {
       productId: '4',
       productName: 'Product 4',
-      productImage1: 'image7.jpg',
+      productImage1: 'assets/images/image4.png',
       productImage2: 'image8.jpg',
       productDesc: 'Description of Product 4',
       productPrice: 339.99
