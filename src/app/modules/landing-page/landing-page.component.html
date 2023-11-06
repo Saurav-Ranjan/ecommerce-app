@@ -7,13 +7,13 @@
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 d-flex" *ngFor="let item of ProductArr">
           <div class="card w-100 my-2 shadow-2-strong" >
-            <div (click)="goToProductDetails(item._id)">
-            <img src="{{item.ProImage1}}" class="card-img-top" style="aspect-ratio: 1 / 1" />
+            <div (click)="goToProductDetails(item.productId)">
+            <img src="{{item.productImage1}}" class="card-img-top" style="aspect-ratio: 1 / 1" />
           </div>
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title text-dark" (click)="goToProductDetails(item._id)">{{item.proName}}</h5>
-              <h6 class="card-text">{{item.proDesc}}</h6>
-              <p class="card-text"><strong>${{item.proPrice}}</strong></p>
+              <h5 class="card-title text-dark" (click)="goToProductDetails(item.productId)">{{item.productName}}</h5>
+              <h6 class="card-text">{{item.productDesc}}</h6>
+              <p class="card-text"><strong>${{item.productPrice}}</strong></p>
               <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
                 <a href="#!" class="btn btn-primary shadow-0 me-1">Add to cart</a>
                 <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>

@@ -17,12 +17,17 @@ export class ProductDetailsComponent implements OnInit{
 
   ngOnInit() {
     this.productId = this.activeRoute.snapshot.paramMap.get('id');
-   this.productService.getProductById(this.productId).subscribe((res:any) => {
-    if (res ){
-      this.product = res;
-      console.log("product",this.product);
-    }
-  });
+    console.log("id");
+
+  //  this.productService.getProductById(this.productId).subscribe((res:any) => {
+  //   if (res ){
+  //     this.product = res;
+  //     console.log("product",this.product);
+  //   }
+  // });
+
+  this.product = this.productService.getProductById(this.productId);
+
 
   }
 }
