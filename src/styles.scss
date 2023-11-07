@@ -3,3 +3,13 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 // html, body { height: 100%; }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Add styles for success and error snackbars */
+.snackbar-success {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .snackbar-error {
+    background-color: #f44336;
+    color: #fff;
+  }

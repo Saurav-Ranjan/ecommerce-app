@@ -8,6 +8,8 @@ import {ModulesModule} from '../app/modules/modules.module';
 import { UserLoginComponent } from './Admin/user-login/user-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ModulesModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

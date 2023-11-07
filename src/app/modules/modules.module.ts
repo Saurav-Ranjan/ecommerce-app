@@ -4,6 +4,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CartComponent } from './cart/cart.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 
@@ -12,7 +13,8 @@ import { CartComponent } from './cart/cart.component';
     LandingPageComponent,
     ProductDetailsComponent,
     ProductListComponent,
-    CartComponent
+    CartComponent,
+    ContactUsComponent
   ],
   imports: [
     CommonModule
