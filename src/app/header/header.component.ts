@@ -23,16 +23,13 @@ export class HeaderComponent implements OnInit{
 
   navigateToAdmin(){
     this.router.navigate(['/admin']);
-    console.log("navigate success")
   }
 
   navigateToContactUs(){
     this.router.navigate(['/contact-us']);
-    console.log("navigate success")
   }
   navigateToCart(){
     this.router.navigate(['/cart']);
-    console.log("navigate success")
   }
 
 }
